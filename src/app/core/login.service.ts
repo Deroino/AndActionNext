@@ -42,4 +42,22 @@ export class LoginService {
         }),
       );
   }
+
+  logout() {
+    this.myAccessToken = null;
+    localStorage.removeItem(accessTokenApiKey);
+
+    // Redirect to GitHub to revoke authorization
+    // User can manually revoke access or just close the page to logout locally
+    const shouldRevokeGitHub = confirm(
+      'Do you want to revoke GitHub access? Click OK to revoke on GitHub, or Cancel to just logout locally.'
+    );
+
+    if (shouldRevokeGitHub) {
+      // Redirect to GitHub settings to revoke access
+      window.location.href = 'https://github.com/settings/applications';
+    } else {
+      window.location.href = `${window.location.protocol}//${window.location.host}`;
+    }
+  }
 }

@@ -92,6 +92,10 @@ export class AppComponent implements OnInit {
     }
   }
 
+  protected logout() {
+    this.loginService.logout();
+  }
+
   private getUrlParams(url: string) {
     const start = url.indexOf('?') + 1;
     const end =

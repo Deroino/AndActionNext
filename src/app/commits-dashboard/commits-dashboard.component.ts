@@ -64,7 +64,7 @@ export class CommitsDashboardComponent {
   );
   protected readonly filteredRepositories: Signal<RepositoryWithCommits[]>;
 
-  protected readonly updateIntervalInSeconds = 60;
+  protected readonly updateIntervalInSeconds = inject(AndActionDataService).commitsDashboardConfig?.updateIntervalInSeconds ?? 60;
 
   private readonly queryParams = toSignal(inject(ActivatedRoute).queryParams);
   private readonly githubDataService = inject(GithubDataService);

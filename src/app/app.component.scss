@@ -70,6 +70,10 @@ mat-sidenav-container {
     flex: 1;
   }
 
+  &__spacer {
+    width: 1rem;
+  }
+
   &__filter-toggle-button {
     display: none;
 

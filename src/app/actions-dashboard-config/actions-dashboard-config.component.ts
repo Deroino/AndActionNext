@@ -6,7 +6,7 @@ import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { CommitsDashboardConfig } from '../core/commits-dashboard-config';
+import { CommitsDashboardConfig, DEFAULT_UPDATE_INTERVAL_IN_SECONDS } from '../core/commits-dashboard-config';
 
 @Component({
   imports: [FormsModule, MatButtonModule, MatInputModule, RouterModule],
@@ -20,12 +20,15 @@ export class ActionsDashboardConfigComponent {
   protected commitsHistoryCount =
     inject(AndActionDataService).commitsDashboardConfig?.commitsHistoryCount;
 
+  protected updateIntervalInSeconds =
+    inject(AndActionDataService).commitsDashboardConfig?.updateIntervalInSeconds ?? DEFAULT_UPDATE_INTERVAL_IN_SECONDS;
+
   private readonly andActionDataService = inject(AndActionDataService);
   private readonly router = inject(Router);
 
   onSave() {
     this.andActionDataService.saveCommitsDashboardConfig(
-      new CommitsDashboardConfig(this.commitsHistoryCount),
+      new CommitsDashboardConfig(this.commitsHistoryCount, this.updateIntervalInSeconds),
     );
 
     this.router.navigate([AppRouting.DASHBOARD]);

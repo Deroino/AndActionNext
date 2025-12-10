@@ -48,7 +48,7 @@ export class ActionsDashboardComponent {
   );
   protected readonly filteredRepositories: Signal<Repository[]>;
 
-  protected readonly updateIntervalInSeconds = 60;
+  protected readonly updateIntervalInSeconds = inject(AndActionDataService).commitsDashboardConfig?.updateIntervalInSeconds ?? 60;
 
   private readonly andActionDataService = inject(AndActionDataService);
 

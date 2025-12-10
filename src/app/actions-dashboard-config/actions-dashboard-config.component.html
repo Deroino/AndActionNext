@@ -20,6 +20,25 @@
     }
   </mat-form-field>
 
+  <h2>Global</h2>
+
+  <mat-form-field class="update-interval">
+    <mat-label>Workflow polling interval (seconds)</mat-label>
+    <input
+      #updateIntervalInput="ngModel"
+      matInput
+      type="number"
+      name="updateIntervalInSeconds"
+      [(ngModel)]="updateIntervalInSeconds"
+      required
+      min="10"
+      max="300"
+    />
+    @if (updateIntervalInput.invalid) {
+      <mat-error>Enter a value between 10 and 300 seconds</mat-error>
+    }
+  </mat-form-field>
+
   <div class="button-list">
     <a mat-stroked-button [routerLink]="['/', appRouting.DASHBOARD]">Cancel</a>
     <button

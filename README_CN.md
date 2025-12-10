@@ -1,4 +1,21 @@
-# 🎬 And Action - 监控您的 GitHub Actions 工作流和部署
+<div align="center">
+
+# 🎬 And Action - 监控您的GitHub Actions工作流
+
+<div align="center">
+  <div style="width: 100%; height: 2px; margin: 20px 0; background: linear-gradient(90deg, transparent, #00d9ff, transparent);"></div>
+</div>
+
+<div align="center">
+  <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; padding: 25px; text-align: center;">
+    <p>
+      <a href="README_CN.md"><img src="https://img.shields.io/badge/🇨🇳中文版-1a1a2e?style=for-the-badge"></a>
+      <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸English-1a1a2e?style=for-the-badge"></a>
+    </p>
+  </div>
+</div>
+
+</div>
 
 And Action 是一个用于监控 GitHub Actions 的网络应用，可在 [https://andaction-next.netlify.app/](https://andaction-next.netlify.app/) 访问。
 它让您能够在一个地方跟踪所有相关仓库的状态。
@@ -8,6 +25,10 @@ And Action 是一个用于监控 GitHub Actions 的网络应用，可在 [https:
 另外，您可以直接在 UI 中触发 GitHub 部署。
 
 请阅读[文档](#文档)了解更多信息。
+
+<img width="2547" height="1211" alt="image" src="https://github.com/user-attachments/assets/b88f45d1-0a93-4dcd-941c-f0bedca5260c" />
+<img width="2554" height="1219" alt="image" src="https://github.com/user-attachments/assets/b4c76c27-3e40-420e-82a6-d80354f0dc37" />
+<img width="2531" height="1206" alt="image" src="https://github.com/user-attachments/assets/a7f7ed8d-6cdc-4500-92d9-02b575b3643b" />
 
 
 ## 文档
